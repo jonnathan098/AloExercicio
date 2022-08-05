@@ -1,9 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import Navegacao from './src/telas/Navegaçao';
 
 const app: React.FC = () => {
   return(
-    <></>
+    <Navegacao/>
   );
 };
 export default app;
