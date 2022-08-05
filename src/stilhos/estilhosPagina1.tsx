@@ -42,25 +42,26 @@ const styles = StyleSheet.create({
         textTransform:'uppercase',
     },
     Image:{
-     width:200,
-      height:200,
-      marginTop:20,
-      alignItems:'center',
+     width:300,
+      height:400,
+      margin:10,
+      borderWidth:3,
+      
      },
      container01:{
-        fontSize: 24,
-        borderWidth:1,
         width:'100%',
         height:'100%',
         backgroundColor:'#3CB371',
         alignItems:'center',
     },
-    container00: {
-        flex: 1,
-        backgroundColor: '#E0FFFF',
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
+    container02:{
+       
+        marginTop:20,
+        alignItems:'center',
+        padding: 20,
+        marginVertical: 8,
+        marginHorizontal: 16,
+    },
 }) 
 
 export default styles
