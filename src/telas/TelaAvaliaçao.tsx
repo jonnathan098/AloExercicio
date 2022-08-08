@@ -1,5 +1,6 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React, { useState } from "react" ;
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Imagem from "../modelos/Imagem";
 import { View,Text, ListRenderItem, FlatList, TouchableOpacity, Image, SafeAreaView,Button, TouchableWithoutFeedback, ImageComponent} from "react-native";
 import styles from "../stilhos/estilhosPagina1";
@@ -30,6 +31,13 @@ const TelaAvaliaçao: React.FC<Props>= (Props) => {
         return (
             <View>
              <Image  style={styles.imagen}  />
+                <View>
+                 <Icon.Button name="star"size={35} backgroundColor="#FFFF00"
+                    onPress={() => alert('Login com Facebook')}>  
+                 </Icon.Button>
+                    <Icon name="star" size={35} color="#E0FFFF" />
+                    <Icon name="star" size={35} color="#FFFF00" />
+                </View>
           </View>
       )
       }
