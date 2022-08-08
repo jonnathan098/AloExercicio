@@ -1,19 +1,24 @@
-import React, { useState } from "react";
-import { View, Switch, StyleSheet } from "react-native";
 
-const App = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+import React, { useState } from "react";
+import { StyleSheet, TouchableWithoutFeedback, Text, View } from "react-native";
+
+const TouchableWithoutFeedbackExample = () => {
+  const [count, setCount] = useState(0);
+
+  const onPress = () => {
+    setCount(count + 1);
+  };
 
   return (
     <View style={styles.container}>
-      <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-      />
+      <View style={styles.countContainer}>
+        <Text style={styles.countText}>Count: {count}</Text>
+      </View>
+      <TouchableWithoutFeedback onPress={onPress}>
+        <View style={styles.button}>
+          <Text>Touch Here</Text>
+        </View>
+      </TouchableWithoutFeedback>
     </View>
   );
 }
@@ -21,9 +26,21 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: 10
+  },
+  button: {
     alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: "#DDDDDD",
+    padding: 10
+  },
+  countContainer: {
+    alignItems: "center",
+    padding: 10
+  },
+  countText: {
+    color: "#FF00FF"
   }
 });
 
-export default App;
+export default TouchableWithoutFeedbackExample;

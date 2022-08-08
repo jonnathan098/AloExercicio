@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     MansagemDesucesso:{
         textTransform:'uppercase',
     },
-    Image:{
+    imagen:{
      width:300,
       height:400,
       margin:10,
